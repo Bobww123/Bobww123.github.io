@@ -24,7 +24,7 @@
 <meta property="og:description" content="前言为了编制量表，需要用到探索性因素分析这一多元统计方法。在这里对统计学习做一个小总结，来加深对其的理解。学习的材料主要是来自于管理心理学可课堂的学习和配合网络资料以及吴明隆和邱皓政老师的几本辅导教材。
 探索性因素分析的概述 因素分析是多元统计分析技术的一个分支，其主要的目的是浓缩数据，也就是通过研究众多变量之间的内部依赖关系（相关），探求观测数据中的基本结构，并用少数几个假想变量来表示基本的数">
 <meta property="og:image" content="http://pic1.183read.com/data/magazine/76/30776/76/615776/article_images/99286939f06dc45c7e5e93062d3e39f4.jpg">
-<meta property="og:updated_time" content="2018-06-18T10:30:52.087Z">
+<meta property="og:updated_time" content="2018-06-18T10:35:06.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="探索性因素分析(一)">
 <meta name="twitter:description" content="前言为了编制量表，需要用到探索性因素分析这一多元统计方法。在这里对统计学习做一个小总结，来加深对其的理解。学习的材料主要是来自于管理心理学可课堂的学习和配合网络资料以及吴明隆和邱皓政老师的几本辅导教材。
@@ -332,9 +332,17 @@
 <h2 id="因素分析的基本原理"><a href="#因素分析的基本原理" class="headerlink" title="因素分析的基本原理"></a>因素分析的基本原理</h2><h3 id="因素分析模型"><a href="#因素分析模型" class="headerlink" title="因素分析模型"></a>因素分析模型</h3><p>我们可以从斯皮尔曼的模型总结出一般的模型：</p>
 <blockquote>
 <p>xi=ai1f1+ai2f2+ai3f3+·····+aimfm+εi<br>   x1=a11f1+a12f2+a13f3+·····+a1mfm+ε1<br>   x2=a21f1+a22f2+a23f3+·····+a2mfm+ε2<br>  ····· ······ ····· ····· ····· ····· ·····<br>(   i=1····· k        m≤i    )<br>其中f1 f2 ····· fm为公因子，εi为特殊因子，aij表示第i个变量在第j个公因子上的负载（  i =1····· k ，j＝1····m  ）</p>
-<p>###因素分析模型的假设：<br><em>观测变量都是均值为0（Mx=0）,方差为1（S2x＝1）的变量。特殊因子的均值为0   （M ε＝0）。
-</em>各公因子之间、特殊因子之间以及特殊因子与公因子之间均为零相关。即：<br>     Cov（f,f）＝  0<br>     Cov（ε,ε）＝  0<br>     Cov（f,ε）＝  0<br>以下之统计度量是测量因素分析的执行是否适合:<br>     +反映象相关矩阵（anti-image correlation matrix）即观测变量的负的偏相关系数。     如果数据中确实存在公因子，则变量之间的偏相关系数应该很小，所以，如果反映象相关矩阵中很多变量的偏相关系数比较大，应该考虑该观测数据可能不适合做因素分析。<br>    +巴特利特球体检验（Bartlett test of sphericity）<br>    该统计量从检验整个相关矩阵出发，如果检验差异显著，则观测变量适合做因素分析；如果检验差异不显著，则观测变量不适合做因素分析。<br>     +KMO（Kaiser-Meyer-Olkin Measure of Sampling Adequacy）测度<br>   该测度从比较观测变量之间的简单相关系数和偏相关系数的相对大小出发，其值的变化范围从 0 到 1 通常按照一下标准解释KMO值的大小：  0.9  以上 ，非常好 .   0.8－0.9  ，好.    0.7－0.8  ，一般.    0.6－0.7  ，差.    0.5－0.6  ，很差.    0.5 以下  ，不能接受</p>
 </blockquote>
+<h3 id="因素分析模型的假设："><a href="#因素分析模型的假设：" class="headerlink" title="因素分析模型的假设："></a>因素分析模型的假设：</h3><ul>
+<li>观测变量都是均值为0（Mx=0）,方差为1（S2x＝1）的变量。特殊因子的均值为0   （M ε＝0）。</li>
+<li>各公因子之间、特殊因子之间以及特殊因子与公因子之间均为零相关。即：<br>   Cov（f,f）＝  0<br>   Cov（ε,ε）＝  0<br>   Cov（f,ε）＝  0<br>以下之统计度量是测量因素分析的执行是否适合: <ul>
+<li>反映象相关矩阵（anti-image correlation matrix）即观测变量的负的偏相关系数。     如果数据中确实存在公因子，则变量之间的偏相关系数应该很小，所以，如果反映象相关矩阵中很多变量的偏相关系数比较大，应该考虑该观测数据可能不适合做因素分析。<ul>
+<li>巴特利特球体检验（Bartlett test of sphericity）<br>该统计量从检验整个相关矩阵出发，如果检验差异显著，则观测变量适合做因素分析；如果检验差异不显著，则观测变量不适合做因素分析。<br>+KMO（Kaiser-Meyer-Olkin Measure of Sampling Adequacy）测度<br>该测度从比较观测变量之间的简单相关系数和偏相关系数的相对大小出发，其值的变化范围从 0 到 1 通常按照一下标准解释KMO值的大小：  0.9  以上 ，非常好 .   0.8－0.9  ，好.    0.7－0.8  ，一般.    0.6－0.7  ，差.    0.5－0.6  ，很差.    0.5 以下  ，不能接受</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -346,7 +354,7 @@
         <p><span>本文标题:</span><a href="/2018/05/30/探索性因素分析/">探索性因素分析(一)</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Bob</a></p>
         <p><span>发布时间:</span>2018-05-30, 15:11:12</p>
-        <p><span>最后更新:</span>2018-06-18, 18:30:52</p>
+        <p><span>最后更新:</span>2018-06-18, 18:35:06</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/05/30/探索性因素分析/" title="探索性因素分析(一)">https://bobww123.github.io/2018/05/30/探索性因素分析/</a>
             <span class="copy-path" data-clipboard-text="原文: https://bobww123.github.io/2018/05/30/探索性因素分析/　　作者: Bob" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -376,7 +384,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#探索性因素分析的概述"><span class="toc-number">2.</span> <span class="toc-text">探索性因素分析的概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#因素分析的基本原理"><span class="toc-number">3.</span> <span class="toc-text">因素分析的基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#因素分析模型"><span class="toc-number">3.1.</span> <span class="toc-text">因素分析模型</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#探索性因素分析的概述"><span class="toc-number">2.</span> <span class="toc-text">探索性因素分析的概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#因素分析的基本原理"><span class="toc-number">3.</span> <span class="toc-text">因素分析的基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#因素分析模型"><span class="toc-number">3.1.</span> <span class="toc-text">因素分析模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#因素分析模型的假设："><span class="toc-number">3.2.</span> <span class="toc-text">因素分析模型的假设：</span></a></li></ol></li></ol>
         
     </div>
     <style>
